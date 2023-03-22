@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ProPass - Signup</title>
+</head>
+<body>
+
+    <div class="header">
+        <h1>ProPass</h1>
+        <h3>Signup</h3>
+        <p><strong>Welcome!</strong></p>
+    </div>
+
+    <div class="forms-container">
+        <form id="signup-form">
+            <p>Email:</p>
+            <input type="email" id="email" name="email"><br><br>
+
+            <p>Password:</p>
+            <input type="password" id="password" name="password"><br><br>
+
+            <p>Master Password:</p>
+            <p>Master Password is a way for added security for your account, and that is required.</p>
+            <input type="password" id="master-password" name="master-password"><br><br>
+        </form>
+    </div>
+
+    <div class="submit">
+        <button onclick="saveData()">Signup & Go to App</button>
+    </div>
+
+    <script>
+        function saveData() {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const masterPassword = document.getElementById("master-password").value;
+
+            // Store the email and password in local storage
+            localStorage.setItem("email", email);
+            localStorage.setItem("password", password);
+            localStorage.setItem("masterPassword", masterPassword);
+
+            // Redirect to the app page
+            window.location.href = "http://127.0.0.1:5500/.app/app.html";
+        }
+    </script>
+    
+</body>
+</html>
