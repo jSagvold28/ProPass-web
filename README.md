@@ -1,2 +1,2 @@
 # ProPass-web
-Web app for ProPass
+Web front-end for password manager, named ProPass
